@@ -67,7 +67,7 @@ public class QuizServiceTest {
         // T3: asking for too many gives only what exists
         check("count 100 gives only 4 verified QCat phrases", qs.createQuiz("QCat", 100, "TYPING").size() == 4);
         check("category is case-insensitive", qs.createQuiz("qcat", 2, "TYPING").size() == 2);
-        check("ALL uses every verified phrase", qs.createQuiz("ALL", 100, "TYPING").size() == 6);
+        check("ALL uses every verified phrase", qs.createQuiz("ALL", 100, "TYPING").size() == ps.getVerifiedPhrases().size());
 
         // T4: bad input
         check("unknown category throws", throwsInvalid(qs, "Nope", 3, "TYPING"));

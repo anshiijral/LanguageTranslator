@@ -1,0 +1,8 @@
+id,phrase,translation,transliteration,category,verified
+"1","नमस्ते","Hello","Namaste","Greetings","true"
+"2","धन्यवाद","Thank you","Dhanyavaad","Greetings","true"
+"3","आप कैसे हैं?","How are you?","Aap kaise hain?","Greetings","true"
+"4","पानी दीजिए।","Please give me water","Paani dijiye","Food","false"
+"5","मुझे भूख लगी है।","I am hungry","Mujhe bhookh lagi hai","Food","false"
+"6","मदद कीजिए!","Help me!","Madad kijiye","Emergency","false"
+"7","शुभ रात्रि","Good night","Shubh raatri","Greetings","true"

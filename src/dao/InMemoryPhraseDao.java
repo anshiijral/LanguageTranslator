@@ -23,6 +23,11 @@ public class InMemoryPhraseDao implements PhraseDao {
         phrases.add(p);
     }
 
+    public void clear() {
+        phrases.clear();
+        nextId = 1;
+    }
+
     @Override
     public boolean update(Phrase p) {
         for (int i = 0; i < phrases.size(); i++) {

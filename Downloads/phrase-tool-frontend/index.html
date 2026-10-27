@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bhasha Abhyas – Hindi Phrase Practice</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<aside class="side">
+  <div class="brand"><span class="mark">भा</span><div><b>Bhasha Abhyas</b><small>Hindi phrase practice</small></div></div>
+  <nav>
+    <button data-v="phrases" class="on">Phrasebook</button>
+    <button data-v="quiz">Practice quiz</button>
+    <button data-v="progress">Progress</button>
+    <button data-v="data">Import / Export</button>
+  </nav>
+  <div class="foot"><span class="dot"></span>Offline · data stays on this device</div>
+</aside>
+<main>
+  <div id="toast" class="toast"></div>
+  <section id="v-phrases">
+    <header class="top"><div><h1>Phrasebook</h1><p id="count" class="sub"></p></div><button class="btn" id="addBtn">+ Add phrase</button></header>
+    <div class="bar"><input id="kw" type="search" placeholder="Search a phrase, meaning or spelling…"><div id="chips" class="chips"></div></div>
+    <div id="grid" class="grid"></div>
+  </section>
+  <section id="v-quiz" hidden>
+    <header class="top"><div><h1>Practice quiz</h1><p class="sub">Translate the Hindi phrase into English. Only verified phrases are used.</p></div></header>
+    <div id="quizBox"></div>
+  </section>
+  <section id="v-progress" hidden>
+    <header class="top"><div><h1>Your progress</h1><p class="sub">Accuracy by situation, across every quiz you have finished.</p></div></header>
+    <div id="progBox"></div>
+  </section>
+  <section id="v-data" hidden>
+    <header class="top"><div><h1>Import / Export</h1><p class="sub">CSV with UTF-8 so Devanagari stays intact. Imported rows arrive unverified; duplicates are skipped.</p></div></header>
+    <div class="panel row"><button class="btn" id="exp">Export phrases (CSV)</button><label class="btn ghost">Import CSV<input id="imp" type="file" accept=".csv" hidden></label></div>
+  </section>
+</main>
+<dialog id="dlg"><form id="frm" method="dialog">
+  <h2 id="dtitle">Add phrase</h2>
+  <label>Hindi phrase<input name="phrase" lang="hi"></label>
+  <label>English meaning<input name="translation"></label>
+  <label>Transliteration <i>(optional)</i><input name="transliteration"></label>
+  <label>Situation<input name="category" list="cats" placeholder="e.g. Travel"></label><datalist id="cats"></datalist>
+  <p id="derr" class="err"></p>
+  <div class="row end"><button type="button" class="btn ghost" id="dcancel">Cancel</button><button type="submit" class="btn">Save</button></div>
+</form></dialog>
+<script src="api.js"></script><script src="app.js"></script>
+</body></html>
